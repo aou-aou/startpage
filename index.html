@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home | Behemot</title>
+  <link rel="icon" type="image/x-icon" href="icon/favicon.png"> 
+  <meta charset='utf-8'>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+  crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="style.css"> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div id="time">       
+    </div>
+    <div id="date">
+
+    </div>
+    <div class="search">
+      <form method='POST' id='search-form'>
+        <input type="text" name="q" id="q" autocomplete="off" placeholder="Search here..." autofocus>
+      </form>
+    </div>
+    <div id="links">
+      <div class="list">
+        <ul>
+						<li class='title_fav'># general</li>
+          <li><a href="https://cock.li/">cock.li</a></li>
+          <li><a href="https://odysee.com">odysee</a></li>
+          <li><a href="https://www.github.com">github</a></li>
+          <li><a href="https://mail.tutanota.com/login/">tuta</a></li>
+          <li><a href="https://mail.local">email</a></li>
+        </ul>
+      </div>
+      <div class="list">
+        <ul>
+						<li class='title_fav'># utils</li>
+          <li><a href="https://reddit.utsav2.dev/r/popular/search?q=unixporn+dwm&restrict_sr=on&sort=relevance&t=all">r/unixporn</a></li>
+          <li><a href="https://www.tabnews.com.br/">tabnews</a></li>
+          <li><a href="https://wiki.archlinux.org/">archwiki</a></li>
+          <li><a href="https://wiki.osdev.org/Expanded_Main_Page">osdev</a></li>
+          <li><a href="http://doc.cat-v.org/programming/">sys.doc</a></li>
+        </ul>
+      </div>
+      <div class="list">
+        <ul>
+						<li class='title_fav'># libre</li>
+          <li><a id="re">libReddit</a></li>
+          <li><a id="yt">invidious</a></li>
+          <li><a href="https://jellyfin.local">Jellyfin</a></li>
+          <li><a id="ni">nitter</a></li>
+          <li><a id="st">simplytranslate</a></li>
+        </ul>
+      </div>
+      <div class="list">
+        <ul>
+						<li class='title_fav'># server</li>
+						<li><a href="https://gitea.local"> gitea</a></li>
+					<li><a href="https://ambrosio.local">ambrosio-prox</a></li>
+          <li><a href="https://nas.local">nas</a></li>
+          <li><a href="ai.local">oI</a></li>
+          <li><a href="tr.local">torrent</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="weather"></div>
+	<script type="module" crossorigin="anonymous" src="main.js"></script>
+</body>
+</html>
