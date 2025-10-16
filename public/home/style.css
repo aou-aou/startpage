@@ -38,8 +38,6 @@ body {
   margin-top: 10%;
 }
 
-
-
 .ui-widget-content{
 	background-color: var(--background) !important;
 	color: var(--color2);
@@ -97,7 +95,7 @@ a {
 }
 
 a::before {
-  content: "|  ";
+  content: "> ";
 }
 
 #links {
