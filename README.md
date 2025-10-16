@@ -13,18 +13,19 @@
 #### Como utilizar 
 
 ``` bash
+
+    # Para rodar em localhost o servidor node usando seu usuário sem root.
+    pacman -S setcap 
+
+    sudo setcap 'cap_net_bind_service=+ep' /usr/bin/node
+
     git pull https://github.com/aou-aou/startpage 
 
     cd startpage
     
     npm install
     
-    sudo node server 
-
-    ## Ou
-
-    su
-    $ node server
+    node server 
 ```
 
 #### Como pequisar 
