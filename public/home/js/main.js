@@ -1,12 +1,14 @@
 import { time, date, weather } from "./utils.js";
 import { libre, submitSearch } from "./miniEngine/opener.js";
+import colorizer from "./colorizer.js";
 
 $(document).ready(function() {
   time();
   date();
   weather("Sao Paulo");
   libre();
-	autocomplete('')
+  autocomplete('')
+  colorizer();
 
   $('form').submit(function(e) {
     e.preventDefault()
@@ -33,8 +35,10 @@ function autocomplete(){
 	})
 	.then(response => response.json())
 	.then(data => {
+		let autocomplete = data;
+
 		$("#q").autocomplete({
-			source : data		
+			source : autocomplete	
 		});
 	}, 100)
 }

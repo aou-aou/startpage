@@ -1,10 +1,3 @@
-:root{
-  --bg: rgb(30,30,30,0.8);
-  --fg: #bab0ab;
-  --second-bg: #0a0909;
-  --link: #787575;
-	--focus: #ffffff
-}
   
 * {margin: 0; padding: 0}
 
@@ -17,7 +10,7 @@ body {
 }
 
 #time {
-	color: var(--fg);
+	color: var(--color2);
   position: relative;
   top: 5%;
   left: 50%;
@@ -27,7 +20,7 @@ body {
 }
 
 #date {
-	color: var(--fg);
+	color: var(--color2);
   position: relative;
   top: 20%;
   font-size: 30px;
@@ -48,9 +41,9 @@ body {
 
 
 .ui-widget-content{
-	background-color: var(--bg) !important;
-	color: var(--fg);
-	border: 2px solid var(--fg);
+	background-color: var(--background) !important;
+	color: var(--color2);
+	border: 2px solid var(--color2);
 	position: absolute;
 
 }
@@ -60,8 +53,8 @@ body {
 }
 
 .ui-state-active{
-	background-color: var(--link) !important;
-	color: var(--second-bg)
+	background-color: var(--color2) !important;
+	color: var(--color1)
 }
 
 .ui-helper-hidden-accessible{
@@ -69,11 +62,11 @@ body {
 }
 
 input {
-  background-color: var(--bg);
+  background-color: var(--background);
   border: none;
   font-size: 30px !important;
-  color: var(--link);
-  border-bottom: 3px solid var(--fg);
+  color: var(--color2);
+  border-bottom: 3px solid var(--color2);
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -82,13 +75,13 @@ input {
 } 
 
 input:focus {
-  border-color: var(--fg);
+  border-color: var(--color2);
   outline: none;
-	color: var(--fg);
+	color: var(--color2);
 }
 
 #weather {
-	color: var(--fg);
+	color: var(--foreground);
   position: absolute;
   top: 15px;
   right: 15px;
@@ -96,7 +89,7 @@ input:focus {
 
 a {
   text-decoration: none;
-  color: var(--link);
+  color: var(--color2);
   display: block;
   margin-right: 33%;
   display: inline-block;
@@ -117,11 +110,11 @@ a::before {
 }
 
 a:hover{
-  color: var(--focus);
+  color: var(--foreground);
 }
   
 .list {
-  background-color: var(--second-bg);
+  background-color: var(--color1);
   border-radius: 15px;
   margin: 10px;
 	padding-top: 10px;
@@ -142,7 +135,7 @@ ul {
 
 .title_fav{
   margin-bottom: 7px;
-	color: var(--fg);
+	color: var(--foreground);
 }
 
 footer{
@@ -154,7 +147,7 @@ footer{
 }
 
 canvas{
-	background-color: var(--bg);
+	background-color: var(--background);
 	position: fixed;
 	top: 0;
 	left: 0;
