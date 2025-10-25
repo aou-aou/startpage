@@ -57,7 +57,7 @@ export function submitSearch() {
 	  'google': "https://www.google.com/search?q=",
 		'duck': "https://duckduckgo.com/?q=",
 	  'librex': "https://librey.devol.it/search.php?q=",
-	  'searxng': "http://docker.local:8080/search?q="
+	  'searxng': "https://search.rhscz.eu/search?q="
 	}
 
   //Verify seeker entry
