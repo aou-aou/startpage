@@ -17,9 +17,13 @@ export function libre() {
   gebi("st").setAttribute("href", randChoice(simplyTranslate));
 }
 
-export function submitSearch() {
-  
-  var searchString = $('#q').val()
+export function submitSearch(query = 'undefined') {
+
+	var searchString = query;
+	if(searchString === 'undefined'){
+		searchString = $('#q').val()
+	}
+
   var arraySearch = searchString.split(" ")
   var sites = {
     "github": "https://github.com",

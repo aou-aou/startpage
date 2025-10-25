@@ -38,7 +38,10 @@ function autocomplete(){
 		let autocomplete = data;
 
 		$("#q").autocomplete({
-			source : autocomplete	
+			source : autocomplete,
+			select : function(event, ui){	
+				submitSearch(ui.item.value);
+			}
 		});
 	}, 100)
 }
