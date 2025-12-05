@@ -35,12 +35,9 @@ app.get('/settings', async (req, res) => {
 
 app.get('/color', (req, res) => {
   const filePath = path.join(os.homedir(), '.cache', 'wal', 'colors.json');
-
-	console.log(filePath);
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
-			console.log(err)
-      res.status(500).send('Erro ao carregar o arquivo  ');
+      res.status(404).send('Erro ao carregar o arquivo JSON');
     } else {
       res.json(JSON.parse(data));
     }
