@@ -21,7 +21,7 @@ $('#q').on('input', function() {
 });
 
 function autocomplete(){
-	fetch(`http://localhost/complete`,{
+	fetch(`/complete`,{
 		method: 'POST',
 		headers: {
 			'Content-Type' : 'application/json'
