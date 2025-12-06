@@ -1,6 +1,6 @@
 
 export default function colorizer(){
-	fetch('http://localhost/color')
+	fetch('/color')
 	.then(response => response.json())
 	.then(colors => {
 		console.log(colors)
