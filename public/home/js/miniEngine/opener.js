@@ -37,19 +37,43 @@ export function submitSearch() {
     return;
   }
 
-	const regexUrl = /((https?:\/\/)?(www\.)?([a-z0-9-]+\.[a-z]{2,})(\/[^\s]*)?|([a-z0-9-]+\.[a-z]{2,}))/gi;
-	if( arraySearch[0].match(regexUrl))
-	{
-		const regexHttps = /^https:\/\//;
+  let url = arraySearch[0].trim();
+	console.log(url)
 
-		if(!regexHttps.test(arraySearch[0])){
-			arraySearch[0] = 'https://www.' + arraySearch[0];
-		}
-		
-		window.location.href = arraySearch[0]
+  const regexLocalhost = /^localhost(:\d+)?/i;
+  // localhost
+  if (regexLocalhost.test(url)) {
+    window.location.href = 'http://' + url;
 		return;
+  }
+
+	const regexUrl = /((https?:\/\/)?(www\.)?([a-z0-9-]+\.[a-z]{2,})(\/[^\s]*)?|([a-z0-9-]+\.[a-z]{2,}))/gi;
+
+	if (arraySearch[0].match(regexUrl)) {
+
+    const regexHttp = /^https?:\/\//i;
+    const regexLocalDomain = /^[a-z0-9-]+\.local(:\d+)?/i;
+
+    // domain.local
+    if (regexLocalDomain.test(url)) {
+      window.location.href = 'http://' + url;
+      return;
+    }
+
+    // http => https
+    if (!regexHttp.test(url)) {
+      url = 'https://' + url;
+    }
+
+    // www
+    if (!/^https?:\/\/(www\.)/i.test(url) && /^[a-z0-9-]+\.[a-z]{2,}/i.test(url)) {
+      url = url.replace(/^https?:\/\//i, match => match + 'www.');
+    }
+
+    window.location.href = url;
+    return;
 	}
- 
+
   let stringSearch = '';
   let seeker_method;
 	let seekers = {
