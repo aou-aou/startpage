@@ -84,9 +84,9 @@ let seekers = {
 
 let sites = {
   "github":"https://github.com",
-  "youtube":"https://youtube.com",
+  "youtube":"http://video.local",
   "gmail":"https://gmail.com",
   "outlook":"https://outlook.com",
-  "goog":"https://google.com",
-  "tradutor":"https://dictionary.cambridge.org/pt/translate/"
+  "google":"https://google.com",
+  "translate":"https://dictionary.cambridge.org/pt/translate/"
 }
