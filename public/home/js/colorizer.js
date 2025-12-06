@@ -13,7 +13,7 @@ export default function colorizer(){
 	})
 	.catch( (error ) => {
 		document.documentElement.style.setProperty('--background', '#000')
-  	document.documentElement.style.setProperty('--foreground', '#000')
+  	document.documentElement.style.setProperty('--foreground', '#fefe')
   	document.documentElement.style.setProperty('--color1', '#005c99')
   	document.documentElement.style.setProperty('--color0', '#ccf5ff')
   	document.documentElement.style.setProperty('--color2', '#fff')
