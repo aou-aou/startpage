@@ -14,7 +14,6 @@ $(document).ready(function() {
     e.preventDefault()
     submitSearch();
   })
-
 });
 
 $('#q').on('input', function() {
@@ -22,7 +21,6 @@ $('#q').on('input', function() {
 });
 
 function autocomplete(){
-
 	fetch(`http://localhost/complete`,{
 		method: 'POST',
 		headers: {
