@@ -84,6 +84,7 @@ export function submitSearch(query = 'undefined') {
 		'du': "https://duckduckgo.com/?q=",
 		'ly': "https://librey.devol.it/search.php?q=",
 		'sp' : "https://www.startpage.com/sp/search?query=",
+		'sx' : "http://search.local?q=" //My private instance, change to your preferred one
 	}
 
   //Verify seeker entry
@@ -103,7 +104,7 @@ export function submitSearch(query = 'undefined') {
     return;
   }
 
-  window.location.href = seekers['searxng'] + stringSearch;
+  window.location.href = seekers['du'] + stringSearch;
 }
 
 export function autocomplete(query){
