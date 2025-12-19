@@ -81,10 +81,10 @@ export function submitSearch(query = 'undefined') {
   let stringSearch = '';
   let seeker_method;
 	let seekers = {
-	  'google': "https://www.google.com/search?q=",
-		'duck': "https://duckduckgo.com/?q=",
-	  'librex': "https://librey.devol.it/search.php?q=",
-	  'searxng': "http://search.local/search?q="
+		'go': "https://www.google.com/search?q=",
+		'du': "https://duckduckgo.com/?q=",
+		'ly': "https://librey.devol.it/search.php?q=",
+		'sp' : "https://www.startpage.com/sp/search?query=",
 	}
 
   //Verify seeker entry
