@@ -1,6 +1,10 @@
 # Start Page 
 
+
 >Uma página incial para navegadores de internet
+
+
+<img src="img/startpage.png" alt="Imargem do Projeto StartPage" width="400" />
 
 ### Fucionalidades
 
@@ -8,7 +12,7 @@
 2. Direcionamento para sites como youtube, github.
 3. Fazer pesquisas em buscadores alternativos.
 4. Autocomplete.
-5. Abertura de links amigaveis e complexos na barra de pesquisa.
+5. Abertura de links amigaveis, complexos e locais na barra de pesquisa.
 
 #### Como utilizar 
 
@@ -26,6 +30,7 @@
     npm install
     
     node server 
+
 ```
 
 #### Como pequisar 
@@ -34,17 +39,24 @@ No momento e reconhecido os buscadores:
 
     - DuckDuckDuckGo
     - Google
-    - LibreX
+    - StartPage
+    - LibreY
 
 Ao fazer uma pesquisa simples por padrão sera chamado o DuckDuckGo,
 caso queira fazer pesquisas em outros buscadores digite o nome do buscador
 na barra de pesquisa, siga os exemplos abaixo:
 
-* duck sua pesquisa aqui
-* google sua pesquisa aqui
-* librex sua pesquisa aqui
+* DuckDuckGO -  du sua pesquisa aqui
+* Google - go sua pesquisa aqui
+* LibreY - ly sua pesquisa aqui
+* StartPage - sp sua pesquisa aqui
 
-Caso queira adicionar outros buscadores ou adicionar mais direcionamentos
-edite o arquivo search.js.
+Caso queira adicionar outros buscadores 
+edite o arquivo [opener.js](public/home/js/miniEngine/opener.js#L83) .
 
+Para mais direcionamentos de instâncias
+edite o arquivo [opener.js](public/home/js/miniEngine/opener.js#L7) .
+
+Para alias de serviços 
+edite o arquivo [opener.js](public/home/js/miniEngine/opener.js#L27) .
 
