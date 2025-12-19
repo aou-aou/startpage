@@ -18,12 +18,11 @@ export function libre() {
 
 export function submitSearch(query = 'undefined') {
 
-	var searchString = query;
-	if(searchString === 'undefined'){
-		searchString = $('#q').val()
+	if(query === 'undefined'){
+		query = $('#q').val()
 	}
  
-  var arraySearch = searchString.split(" ")
+  var arraySearch = query.split(" ")
   var sites = {
     "github": "https://github.com",
     "youtube": $('#yt').attr('href'), 
@@ -34,7 +33,7 @@ export function submitSearch(query = 'undefined') {
   }
 
   //Open site
-  if (typeof sites[arraySearch[0]] !== 'undefined') {    
+  if (typeof sites[arraySearch[0]] !== 'undefined' && arraySearch.length < 2) {
     if(sites[arraySearch[0]] !== undefined){
       window.location.href = sites[arraySearch[0]]
     } 
